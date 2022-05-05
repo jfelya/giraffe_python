@@ -1,4 +1,5 @@
 # Creating a list
+print("LISTS:\n")
 alist = ["math", "science", "math", "art", "engineering", "security", "accountings"]
 print(type(alist))
 print(alist)
@@ -63,3 +64,66 @@ print(square2)
 
 # Stacks are just list where you only append and pop the end of it
 # Queues are just lists where you remove at the beginning
+
+# TUPLES
+# they're the same as lists except that they're immutable
+print("\nTUPLES:\n")
+polo = ("hol11", "extreme")
+# you can write it without the parenthesis
+polo2 = "holl", "exxxx"
+print(polo)
+print(polo2)
+
+# Tuple assignment
+# tuple packing
+planet = ("earth", "mars", "jupiter")
+
+# tuplet unpacking
+a, b, c = planet
+
+print(a)
+print(b)
+print(c)
+
+# imaginary tuples
+a, b = 10, 12
+
+print(a)
+print(b)
+
+# swapping values in a single line
+a, b = b, a
+print(a)
+print(b)
+
+# You can change a tuple to a list with list()
+# And you can change a list into a tuple with tuple()
+# but the proccess is expensive as it involves making a copy of the tuple
+
+# DICTIONARIES
+# Dictionary uses the item key to quickly find the item value. This concept is called hashing
+print("\nDICTIONARIES:\n")
+my_jisho = {
+    "japan": "tokyo",
+    "venezuela": "caracas",
+    "usa": "washington",
+    "uk": "london",
+    "venezuela": "maracaibo"
+}
+# the item value will be the one associated with the last key
+print(my_jisho["venezuela"])
+
+# making a list out of the keys of the dictionary
+poli = list(my_jisho.keys())
+print(poli)
+# using a for loop to get the values
+poli2 = my_jisho.values()
+for v in poli2:
+    print(v)
+# We can even access these values simultaneously using the items() method which returns the respective key and value pair for each element of the dictionary.
+for key, value in my_jisho.items():
+    print(f"Key: {key}")
+    print(f"Value: {value}")
+
+# SETS
+print("\nSETS: \n")
