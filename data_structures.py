@@ -125,5 +125,21 @@ for key, value in my_jisho.items():
     print(f"Key: {key}")
     print(f"Value: {value}")
 
-# SETS
-print("\nSETS: \n")
+# TESTS
+print("\nTESTS: ")
+cedulas = {
+    "fely": "26754147",
+    "guislain": "8900121",
+    "magda": "10923330"
+}
+
+# Gotta convert it to a list since the keys() function doesnt return an iterable variable
+ced_keys = list(cedulas.keys())
+
+resp = str(input(f"De quien quieres la cédula? {ced_keys[0]} (1), {ced_keys[1]} (2) ó {ced_keys[2]} (3)?\n").lower())
+if resp == "1":
+    print(f"La cédula de {ced_keys[0]} es {cedulas[ced_keys[0]]}")
+elif resp == "2":
+    print(f"La cédula de {ced_keys[1]} es {cedulas[ced_keys[1]]}")
+elif resp == "3":
+    print(f"La cédula de {ced_keys[2]} es {cedulas[ced_keys[2]]}")
