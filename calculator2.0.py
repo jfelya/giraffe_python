@@ -18,13 +18,23 @@ if not valid_nums:
 elif not valid_operator:
     print("You need to insert a valid operator")
 else:
+
     if operator == "+":
-        print(str(num1) + " + " + str(num2) + " = " + str(num1 + num2))
+        # the syntax is using an f print with the :, added to the end of that value
+        result = num1 + num2
+        result2 = f'{result:,}'
+        print(str(num1) + " + " + str(num2) + " = " + result2)
     elif operator == "-":
-        print(str(num1) + " - " + str(num2) + " = " + str(num1 - num2))
+        result = num1 - num2
+        result2 = f'{result:,}'
+        print(str(num1) + " - " + str(num2) + " = " + result2)
     elif operator == "*":
-        print(str(num1) + " * " + str(num2) + " = " + str(num1 * num2))
+        result = num1 * num2
+        result2 = f'{result:,}'
+        print(str(num1) + " * " + str(num2) + " = " + result2)
     elif operator == "/":
-        print(str(num1) + " / " + str(num2) + " = " + str(num1 / num2))
+        result = num1 / num2
+        result2 = f'{result:,}'
+        print(str(num1) + " / " + str(num2) + " = " + result2)
     else:
         print("Wrong operator")

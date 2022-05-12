@@ -8,18 +8,20 @@ def login():
             password_input = str(input("Insert your password: ")).lower()
             user_pass = False
             password_pass = False
+            word = []
             for line in file_object_read:
-                if user_input == line:
-                    user_pass = True
-                if password_input == line:
-                    password_pass = True
+                word.append(line.strip())
 
+            if user_input == word[0]:
+                user_pass = True
+            if password_input == word[1]:
+                password_pass = True
+            print(word)
             if user_pass and password_pass:
-                print("You have successfully logged in")
+                print("You have successfully logged in\n")
             else:
                 print("Your username or password don't match\n")
                 login()
-
 
 
 def signup():
@@ -32,10 +34,10 @@ def signup():
                 file_object.write(all_user)
             except:
                 print("Something happened")
-        print("You have created your account successfully")
+        print("You have created your account successfully\n")
         login()
     else:
-        print("You should insert valid data")
+        print("You should insert valid data\n")
         login()
 
 
